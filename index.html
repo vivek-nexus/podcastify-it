@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="wespeak.webmanifest">
     <link rel="icon" type="image/png" href="images/podcastify.png"/>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173527116-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-173527116-1');
+    </script>
+
 </head>
 <body>
 
@@ -68,7 +79,7 @@
             </div>
             <div class="col-3 mini-cards">
                 <img src="images/icon-paste.svg" alt="icon-paste">
-                <div class="mt-2">Paste Content</div>
+                <div class="mt-2">Paste Content Directly</div>
             </div>
             <div class="col-3 mini-cards">
                 <img src="images/icon-text.svg" alt="icon-text">
@@ -198,6 +209,7 @@ Mobile devices(Android/iOS) contain better Text to Speech Engines, providing a m
                 <div class="line3 speaking-animation"></div>
                 <div class="line4 speaking-animation"></div>
             </div>
+            
 
             <div class="progress" style="height: 10px; background-color: #CBEAFF;">
                 <div class="progress-bar" id="progress-bar" style="width:0%; background-color: #2200FF;"></div>
