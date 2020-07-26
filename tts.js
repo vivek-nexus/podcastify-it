@@ -166,6 +166,11 @@ async function parseSentences(){
     return;
   }
 
+  if(inputText.value===''){
+    alert("Text Box is empty! Add some content or fetch from a URL.");
+    return;
+  }
+
 
   // Function Analytics
   telegramMessage=`Used Parse and Play Option%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
