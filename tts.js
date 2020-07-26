@@ -17,6 +17,8 @@ const fetchButton=document.querySelector('#fetch-button');
 const fetchAnimation=document.querySelector('#fetch-animation');
 const progressBar=document.querySelector('#progress-bar');
 
+
+
 //Setting Variables
 let voices=[];
 let date= new Date();
@@ -31,6 +33,14 @@ nextButton.disabled=true;
 pauseButton.style.display = 'none';
 resumeButton.style.display = 'none';
 animation.style.display='none';
+
+// Site Analytics
+let telegramMessage='';
+telegramMessage=`Landing Page Vistor%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
+
+fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
+
+
 
 const synthObj=window.speechSynthesis;
 
@@ -106,6 +116,10 @@ function populateVoices(){
 
 
 async function fetchArticle(){
+  // Function Analytics
+  telegramMessage=`Used Fetch Option%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
+  fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
+
   let result='';
   inputText.value='';
   fetchAnimation.style.display='block';
@@ -143,6 +157,11 @@ async function fetchArticle(){
 //Loops over sentences and sends to showReadingText
 //Handles Previous, Stop, Pause, Resume and Next Buttons
 async function parseSentences(){
+  // Function Analytics
+  telegramMessage=`Used Parse and Play Option%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
+  fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
+
+
   const selectedVoice = inputVoice.selectedOptions[0].getAttribute('data-voice-name');
 
   if(selectedVoice===''){
@@ -231,7 +250,8 @@ function speaker(textPart){
   synthObj.speak(speakObj);
   console.log('Reading: '+textPart);
   
-  return new Promise(resolve => {speakObj.onend = resolve;});
+  return new Promise(resolve => {speakObj.onend = resolve;
+  });
 }
 
 //Called by Pause Button
