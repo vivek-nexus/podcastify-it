@@ -4,17 +4,17 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/images/podcastify.png",
+        "src": "/images/podcastify-192.png",
         "type": "/image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/podcastify.png",
+        "src": "/images/podcastify-512.png",
         "type": "/image/png",
         "sizes": "512x512"
       }
     ],
     "name": "Podcastify It!",
     "short_name": "Podcastify It!",
-    "start_url": "https://yakshag.github.io/podcastify-it/"
+    "start_url": "/#app"
   }

@@ -16,6 +16,7 @@ const inputURL=document.querySelector('#input-url');
 const fetchButton=document.querySelector('#fetch-button');
 const fetchAnimation=document.querySelector('#fetch-animation');
 const progressBar=document.querySelector('#progress-bar');
+const a2hsButton=document.querySelector('#a2hs');
 
 
 
@@ -38,7 +39,7 @@ animation.style.display='none';
 let telegramMessage='';
 telegramMessage=`Landing Page Vistor%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
 
-fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
+// fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
 
 
 
@@ -80,6 +81,11 @@ nextButton.addEventListener('click',function(){
   speechSynthesis.cancel();
   next=true;
 });
+
+a2hsButton.addEventListener('click', function(){
+  let deferredPrompt =window.addEventListener('beforeinstallprompt');
+  deferredPrompt.prompt();
+})
 
 
 
