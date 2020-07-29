@@ -240,7 +240,6 @@ Mobile devices(Android/iOS) contain better Text to Speech Engines, providing a m
             </div>
         </div>
 
-
     </section>
 
     <section class="container mt-5 pt-5">
@@ -253,10 +252,36 @@ Mobile devices(Android/iOS) contain better Text to Speech Engines, providing a m
             </a>
         </div>
         <div class="text-center m-0 p-0 mini-cards" style="background: none;">
-            <button style="background: none;" id="a2hs">
-                <img style="display: inline-block;" src="images/icon-a2hs.svg" alt="Add to Home Screen">
-                <p class="font-weight-bold text-dark">Add Podcastify to Home Screen</p>
-            </button>
+            <!-- Button trigger modal -->
+            <div class="mt-2 d-flex justify-content-center">
+                <button class="button-link-like" data-toggle="modal" data-target="#help-a2hs">
+                    <img style="display: inline-block;" src="images/icon-a2hs.svg" alt="">
+                    <p class="font-weight-bold text-dark">Add Podcastify to Home Screen</p>
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="help-a2hs" tabindex="-1" role="dialog" aria-labelledby="help-a2hs-label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="help-a2hs-label">Adding Podcastify to Home Screen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="font-weight-bold"><h2>Chrome</h2></div>
+                        <div><img src="images/a2hs-chrome.jpeg" alt="chrome" style="max-width: 90%; border: 1px solid black; border-radius: 5px;"></div>
+                        <div class="font-weight-bold mt-5"><h2>Mozilla Firefox</h2></div>
+                        <div><img src="images/a2hs-firefox.jpeg" alt="Firefox" style="max-width: 90%; border: 1px solid black; border-radius: 5px;"></div>
+                        <div class="font-weight-bold mt-5"><h2>Safari</h2><a href="https://blog.expo.io/enabling-ios-splash-screens-for-progressive-web-apps-34f06f096e5c">(Image Credits)</a></div>
+                        <div><a href="https://miro.medium.com/max/1050/1*4yTqRXTD-GK2GOmqblGhxA.png"><img src="images/a2hs-ios.png" alt="Safari" style="max-width: 90%; border: 1px solid black; border-radius: 5px;"></a></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
         </div>
         
     </section>
