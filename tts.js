@@ -236,7 +236,7 @@ async function showReadingText(textPart){
   screenLock.enable();
   console.log('Screen Locked!');
   readingText.textContent=textPart;
-  readingText.scrollIntoView();
+  inputVoice.scrollIntoView();
   await speaker(textPart);
   screenLock.disable();
   console.log('Screen Unlocked.');
