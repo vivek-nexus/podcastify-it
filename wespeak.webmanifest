@@ -4,17 +4,17 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/images/podcastify-192.png",
+        "src": "/podcastify-it/images/podcastify-192.png",
         "type": "/image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/podcastify-512.png",
+        "src": "/podcastify-it/images/podcastify-512.png",
         "type": "/image/png",
         "sizes": "512x512"
       }
     ],
     "name": "Podcastify It!",
     "short_name": "Podcastify It!",
-    "start_url": "/#app"
+    "start_url": "/podcastify-it/#app"
   }
