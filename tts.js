@@ -85,10 +85,6 @@ nextButton.addEventListener('click',function(){
 window.addEventListener("beforeinstallprompt", ev => { 
   // Stop Chrome from asking _now_
   ev.preventDefault();
-
-  // Create your custom "add to home screen" button here if needed.
-  // Keep in mind that this event may be called multiple times, 
-  // so avoid creating multiple buttons!
   a2hsButton.onclick = () => ev.prompt();
 });
 
