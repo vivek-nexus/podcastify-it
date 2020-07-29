@@ -1,20 +1,15 @@
 {
-    "background_color": "blue",
-    "description": "Uses Text to Speech Engine of your device to speak content",
-    "display": "standalone",
-    "icons": [
-      {
-        "src": "images/podcastify-192.png",
-        "sizes": "192x192",
-        "type": "/image/png"
-      },
-      {
-        "src": "images/podcastify-512.png",
-        "sizes": "512x512",
-        "type": "/image/png"
-      }
-    ],
-    "name": "Podcastify It!",
-    "short_name": "Podcastify It!",
-    "start_url": "/podcastify-it/index.html"
-  }
+  "background_color": "purple",
+  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Podcastify",
+  "short_name": "Podcastify",
+  "start_url": "/podcastify-it/index.html"
+}
