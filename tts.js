@@ -232,14 +232,14 @@ async function parseSentences(){
 //Waits until speaking is over
 //Returns promise after completion
 async function showReadingText(textPart){
-  // let screenLock = new NoSleep();
-  // screenLock.enable();
-  // console.log('Screen Locked!');
+  let screenLock = new NoSleep();
+  screenLock.enable();
+  console.log('Screen Locked!');
   readingText.textContent=textPart;
   inputVoice.scrollIntoView();
   await speaker(textPart);
-  // screenLock.disable();
-  // console.log('Screen Unlocked.');
+  screenLock.disable();
+  console.log('Screen Unlocked.');
   return new Promise(resolve => {resolve();});
 }
 
