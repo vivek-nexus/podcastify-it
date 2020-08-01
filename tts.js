@@ -17,7 +17,7 @@ const fetchButton=document.querySelector('#fetch-button');
 const fetchAnimation=document.querySelector('#fetch-animation');
 const progressBar=document.querySelector('#progress-bar');
 const a2hsButton=document.querySelector('#a2hs');
-const videoAnimation=document.querySelector('#video-wrapper');
+
 
 
 //Setting Variables
@@ -34,13 +34,12 @@ nextButton.disabled=true;
 pauseButton.style.display = 'none';
 resumeButton.style.display = 'none';
 animation.style.display='none';
-videoAnimation.style.display='none';
 
 // Site Analytics
 let telegramMessage='';
 telegramMessage=`Landing Page Vistor%0A${date.getFullYear()}%20${date.getMonth()+1}%20${date.getDate()}%0A${date.getHours()}%20${date.getMinutes()}%20${date.getSeconds()}%0A${navigator.platform}%0A${navigator.userAgent}`;
 
-// fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
+fetch(`https://api.telegram.org/bot1391541181:AAF86uEn063OXGO7hiNhNtAQVuE7oYoxVCA/sendMessage?chat_id=425970658&text=${telegramMessage}&parse_mode=Markdown`);
 
 
 
@@ -186,7 +185,7 @@ async function parseSentences(){
 
   speakButton.style.display = 'none';
   pauseButton.style.display = 'inline';
-  // animation.style.display='flex';
+  animation.style.display='flex';
 
   prevButton.disabled=false;
   nextButton.disabled=false;
@@ -200,7 +199,7 @@ async function parseSentences(){
       await pausedResume();
       resumeButton.style.display = 'none';
       pauseButton.style.display = 'inline';
-      // animation.style.display='flex';
+      animation.style.display='flex';
       i--;
       pause=false;
     }
@@ -236,13 +235,11 @@ async function showReadingText(textPart){
   // let screenLock = new NoSleep();
   // screenLock.enable();
   // console.log('Screen Locked!');
-  videoAnimation.style.display='flex';
   readingText.textContent=textPart;
   inputVoice.scrollIntoView();
   await speaker(textPart);
   // screenLock.disable();
   // console.log('Screen Unlocked.');
-  videoAnimation.style.display='none';
   return new Promise(resolve => {resolve();});
 }
 
@@ -300,5 +297,4 @@ function pausedResume(){
     nextButton.onclick = resolve;
   });
 }
-
 
