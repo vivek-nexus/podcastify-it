@@ -82,6 +82,8 @@ nextButton.addEventListener('click',function(){
   next=true;
 });
 
+window.addEventListener('blur', pauseFunction);
+
 window.addEventListener("beforeinstallprompt", ev => { 
   // Stop Chrome from asking _now_
   ev.preventDefault();
