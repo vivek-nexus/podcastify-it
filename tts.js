@@ -132,7 +132,7 @@ async function fetchArticle(){
   let result='';
   inputText.value='';
   fetchAnimation.style.display='block';
-  website='https://cors-anywhere.herokuapp.com/'+inputURL.value;
+  website='https://evening-falls-94871.herokuapp.com/'+inputURL.value;
   console.log(website);
 
   console.log(`Fetching from ${website}`);
