@@ -132,17 +132,18 @@ async function fetchArticle(){
   let result='';
   inputText.value='';
   fetchAnimation.style.display='block';
-  website='https://evening-falls-94871.herokuapp.com/'+inputURL.value;
+  website='https://hidden-citadel-76712.herokuapp.com?url=' + inputURL.value;
   console.log(website);
 
   console.log(`Fetching from ${website}`);
   await fetch(website).then(function (response) {
   // The API call was successful!
   return response.text();
-  }).then(function (html) {
+  }).then(function (responseJSON) {
+  articleRaw = JSON.parse(responseJSON)
   // Convert the HTML string into a document object
   const parser = new DOMParser();
-  let doc = parser.parseFromString(html, 'text/html');
+  let doc = parser.parseFromString(articleRaw.content, 'text/html');
   // Get the article content tags
     let array = doc.querySelectorAll('h1, h2, h3, p');
     for (element of array){
