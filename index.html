@@ -278,5 +278,15 @@ Mobile devices(Android/iOS) contain better Text to Speech Engines, providing a m
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="tts.js"></script>
     <script src="nosleep.js"></script>
+    <script>
+        setTimeout(() => {
+            const newURL = "https://yakshag.github.io/listen/"
+            const result = confirm("There's a new version of this tool. Would you like to use that?");
+            if (result) {
+                window.location.assign = newURL;
+                window.open(newURL, "_top")
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
